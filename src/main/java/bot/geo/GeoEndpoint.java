@@ -1,6 +1,6 @@
-package tutorial.geo;
+package bot.geo;
 
-import tutorial.Endpoint;
+import bot.main.Endpoint;
 
 public enum GeoEndpoint implements Endpoint {
     DIRECT("direct");

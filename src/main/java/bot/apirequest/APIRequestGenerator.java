@@ -1,4 +1,4 @@
-package tutorial.apirequest;
+package bot.apirequest;
 
 import java.util.Map;
 import java.util.stream.Collectors;

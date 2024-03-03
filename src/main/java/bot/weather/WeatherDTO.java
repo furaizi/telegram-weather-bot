@@ -1,6 +1,4 @@
-package tutorial.weather;
-
-import tutorial.Main;
+package bot.weather;
 
 public class WeatherDTO {
 

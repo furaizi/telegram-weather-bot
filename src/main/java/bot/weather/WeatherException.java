@@ -1,4 +1,4 @@
-package tutorial.weather;
+package bot.weather;
 
 public class WeatherException extends Exception {
 

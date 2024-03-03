@@ -1,17 +1,15 @@
-package tutorial;
+package bot.main;
 
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
-import tutorial.geo.Coordinates;
-import tutorial.weather.WeatherCondition;
+import bot.geo.Coordinates;
+import bot.weather.WeatherCondition;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 
-import static tutorial.Main.bot;
+import static bot.main.Main.bot;
 
 public class BotUser extends User {
     private boolean hasLocation = false;

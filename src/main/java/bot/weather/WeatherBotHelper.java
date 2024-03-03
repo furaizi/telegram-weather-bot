@@ -1,9 +1,9 @@
-package tutorial.weather;
+package bot.weather;
 
-import tutorial.BotUser;
-import tutorial.geo.GeoHelper;
+import bot.main.BotUser;
+import bot.geo.GeoHelper;
 
-import static tutorial.Main.bot;
+import static bot.main.Main.bot;
 
 class WeatherBotHelper {
 

@@ -1,11 +1,11 @@
-package tutorial.weather;
+package bot.weather;
 
 import org.json.JSONObject;
-import tutorial.BotMode;
-import tutorial.apirequest.APIRequestData;
-import tutorial.apirequest.APIRequestGenerator;
-import tutorial.apirequest.APIRequestSender;
-import tutorial.geo.Coordinates;
+import bot.main.BotMode;
+import bot.apirequest.APIRequestData;
+import bot.apirequest.APIRequestGenerator;
+import bot.apirequest.APIRequestSender;
+import bot.geo.Coordinates;
 import java.util.HashMap;
 
 public class CurrentWeatherHelper {

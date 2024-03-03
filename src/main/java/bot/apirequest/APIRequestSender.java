@@ -1,4 +1,4 @@
-package tutorial.apirequest;
+package bot.apirequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;

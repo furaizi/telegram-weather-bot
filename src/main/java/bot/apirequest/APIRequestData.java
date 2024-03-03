@@ -1,7 +1,7 @@
-package tutorial.apirequest;
+package bot.apirequest;
 
-import tutorial.BotMode;
-import tutorial.Endpoint;
+import bot.main.BotMode;
+import bot.main.Endpoint;
 
 import java.util.HashMap;
 

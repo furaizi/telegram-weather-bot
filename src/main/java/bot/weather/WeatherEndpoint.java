@@ -1,6 +1,6 @@
-package tutorial.weather;
+package bot.weather;
 
-import tutorial.Endpoint;
+import bot.main.Endpoint;
 
 public enum WeatherEndpoint implements Endpoint {
     CURRENT("weather"),

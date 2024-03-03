@@ -1,10 +1,10 @@
-package tutorial.geo;
+package bot.geo;
 
 import org.json.JSONArray;
-import tutorial.BotMode;
-import tutorial.apirequest.APIRequestData;
-import tutorial.apirequest.APIRequestGenerator;
-import tutorial.apirequest.APIRequestSender;
+import bot.main.BotMode;
+import bot.apirequest.APIRequestData;
+import bot.apirequest.APIRequestGenerator;
+import bot.apirequest.APIRequestSender;
 
 import java.util.HashMap;
 

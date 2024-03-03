@@ -1,7 +1,7 @@
-package tutorial.weather;
+package bot.weather;
 
-import tutorial.BotUser;
-import tutorial.Startable;
+import bot.main.BotUser;
+import bot.main.Startable;
 
 public class WeatherBot implements Startable {
 

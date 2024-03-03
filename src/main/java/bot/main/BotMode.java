@@ -1,4 +1,4 @@
-package tutorial;
+package bot.main;
 
 public enum BotMode {
     WEATHER("https://api.openweathermap.org/data/2.5/") {

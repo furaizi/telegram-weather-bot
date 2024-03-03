@@ -1,4 +1,4 @@
-package tutorial.weather;
+package bot.weather;
 
 import org.json.JSONObject;
 

@@ -1,4 +1,4 @@
-package tutorial.geo;
+package bot.geo;
 
 public class Coordinates {
 
