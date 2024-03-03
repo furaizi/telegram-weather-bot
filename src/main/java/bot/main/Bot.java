@@ -20,8 +20,6 @@ public class Bot extends TelegramLongPollingBot {
 
 
     private final HashMap<Long, BotUser> users = new HashMap<>();
-    static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-    static final DateTimeFormatter parser = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     private static final ReplyKeyboardMarkup keyboard = new ReplyKeyboardMarkup();
     private static final String BOT_USERNAME = "Test bot 1";
@@ -50,9 +48,6 @@ public class Bot extends TelegramLongPollingBot {
         return users;
     }
 
-    public DateTimeFormatter getParser() { return parser; }
-
-    public DateTimeFormatter getFormatter() { return formatter; }
 
     @Override
     public void onUpdateReceived(Update update) {
