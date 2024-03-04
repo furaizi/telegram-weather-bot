@@ -15,7 +15,6 @@ class WeatherBotHelper {
     private static final String GET_FORECAST = "Дізнатись прогноз";
 
     // Bot answers text
-
     private static final String PLEASE_ENTER_CITY = "Введіть, будь ласка, ваше місто.";
     private static final String ENTER_CITY_FIRST = "Для використання цієї функції вам спочатку треба вказати місто.";
     private static final String GET_FORECAST_RULES = "Введіть кількість днів від 0 до 5, прогноз на які ви хочете.\n" +
@@ -56,6 +55,7 @@ class WeatherBotHelper {
             user.setHasLocation(true);
 
             bot.sendText(user, "Ви встановили місто \"" + user.getLocation() + "\".");
+            bot.sendText(user, String.format("Ви встановили місто \"%s\"", user.getLocation()));
             user.weatherCondition = WeatherCondition.START;
         }
     }
