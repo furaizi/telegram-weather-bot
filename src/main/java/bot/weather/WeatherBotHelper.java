@@ -22,6 +22,7 @@ class WeatherBotHelper {
     private static final String CHOOSE_BUTTON = "Оберіть одну з кнопок нижче.";
     private static final String NOT_FROM_0_TO_5 = "Введіть, будь ласка, число від 0 до 5.";
     private static final String NOT_A_NUMBER = "Введіть, будь ласка, число.";
+    private static final String CITY_IS_SET = "Ви встановили місто \"%s\".";
 
     private BotUser user;
     private String message;
@@ -35,28 +36,22 @@ class WeatherBotHelper {
         this.geoHelper = new GeoHelper(message);
     }
 
-    private void updateMessage() {
-        message = user.getMessage().getText();
-        geoHelper.setLocation(message);
-    }
-
     void handleLocation() throws Exception {
         updateMessage();
 
-        if (message.equals(CHANGE_LOCATION))
-            throw new WeatherException(PLEASE_ENTER_CITY);
-        else if (message.equals(CURRENT_LOCATION))
-            user.sendLocation();
-        else {
-            var coordinates = geoHelper.getCoordinates();
+        switch (message) {
+            case CHANGE_LOCATION -> throw new WeatherException(PLEASE_ENTER_CITY);
+            case CURRENT_LOCATION -> user.sendLocation();
+            default -> {
+                var coordinates = geoHelper.getCoordinates();
 
-            user.setCoordinates(coordinates);
-            user.setLocation(message);
-            user.setHasLocation(true);
+                user.setCoordinates(coordinates);
+                user.setLocation(message);
+                user.setHasLocation(true);
 
-            bot.sendText(user, "Ви встановили місто \"" + user.getLocation() + "\".");
-            bot.sendText(user, String.format("Ви встановили місто \"%s\"", user.getLocation()));
-            user.weatherCondition = WeatherCondition.START;
+                bot.sendText(user, String.format(CITY_IS_SET, user.getLocation()));
+                user.weatherCondition = WeatherCondition.START;
+            }
         }
     }
 
@@ -99,6 +94,11 @@ class WeatherBotHelper {
             }
             default -> throw new WeatherException(CHOOSE_BUTTON);
         }
+    }
+
+    private void updateMessage() {
+        message = user.getMessage().getText();
+        geoHelper.setLocation(message);
     }
 
     private boolean isCurrent(int days) {
